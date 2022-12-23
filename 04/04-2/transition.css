@@ -1,0 +1,26 @@
+section {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #000;
+  float: left;
+  margin: 50px;
+  perspective: 400px;
+}
+
+section article {
+  width: 100%;
+  height: 100%;
+  background: blue;
+  opacity: 0.3;
+  transform: rotateY(0deg);
+
+  transition-property: transform opacity;
+  transition-duration: 1s;
+  transition-delay: 0s;
+  transition-timing-function: cubic-bezier(0.46, -0.64, 0.58, 1.39);
+}
+
+section:hover article {
+  transform: rotateY(45deg);
+  background: red;
+}
