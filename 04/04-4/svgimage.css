@@ -1,0 +1,11 @@
+article svg {
+  width: 100%;
+}
+
+article svg path {
+  fill: transparent;
+  stroke: red;
+  stroke-width: 1;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 50;
+}
