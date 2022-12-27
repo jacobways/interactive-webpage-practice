@@ -53,3 +53,21 @@ section .sky .cloud2 {
   top: 20px;
   left: 0%;
 }
+
+section .town .circle {
+  position: absolute;
+  bottom: 104;
+  left: 50%;
+  margin-left: -165px;
+  opacity: 0.7;
+}
+section .town .night {
+  position: absolute;
+  bottom: 0px;
+  left: 40px;
+}
+section .town .day {
+  position: absolute;
+  bottom: 0px;
+  left: 40px;
+}
