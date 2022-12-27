@@ -23,7 +23,8 @@ header .inner {
   position: relative;
 }
 header .inner h1 {
-  position: absolute;
+  position: absolute; /* absolute 설정하면 float 배치 시 HTML 콘텐츠 순서를 변경할 수 없기 때문 */
+  /* HTML 코드 상으로는 메인 메뉴 중요하여 해당 코드가 위에 있지만 (웹 접근성 관점), 디자인 상에서는 아래에 있으므로 absoulte 사용하여 위치 조정 */
   left: 0px;
   bottom: 15px;
 }
@@ -33,7 +34,7 @@ header .inner h1 a {
 }
 
 header .inner #util {
-  position: absolute;
+  position: absolute; /* absolute로 부모 요소가 인식하지 못하여 float 해제 불필요 */
   top: 20px;
   right: 30px;
 }
@@ -112,4 +113,61 @@ figure .inner a {
 figure .inner a:hover {
   background: #fff;
   color: #555;
+}
+section {
+  width: 100%;
+  padding: 200px 0px;
+}
+section .inner {
+  width: 1180px;
+  margin: 0px auto;
+}
+section .inner h1 {
+  font: bold 24px/1 "arial";
+  color: #555;
+  text-align: center;
+  margin-bottom: 50px;
+}
+section .inner .wrap {
+  width: 100%;
+}
+section .inner .wrap::after {
+  /* 자식 요소 article의 float 해제 */
+  content: "";
+  display: block;
+  clear: both;
+}
+section .inner .wrap article {
+  width: 280px;
+  float: left;
+  margin-right: 20px;
+}
+section .inner .wrap article:last-child {
+  /* 맨 오른쪽 마지막 요소 여백만 제거 */
+  margin-right: 0px;
+}
+section .inner .wrap article h2 {
+  margin-bottom: 10px;
+}
+section .inner .wrap article h2 a {
+  font: bold 16px/1 "arial";
+  color: #555;
+}
+section .inner .wrap article p {
+  font: 14px/1.4 "arial";
+  color: #777;
+}
+section .inner .wrap article .pic {
+  width: 100%;
+  height: 120px;
+  background: #333;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+}
+section .inner .wrap article .pic img {
+  /* 프레임 안에  이미지 꽉 채움 */
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
