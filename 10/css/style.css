@@ -53,6 +53,7 @@ body {
   top: 0px;
   left: 0px;
   /* background: rgba(255, 255, 255, 0.4); */
+  display: none;
 }
 .wrap #circle article h1 {
   position: absolute;
@@ -89,4 +90,39 @@ body {
   background: rgba(255, 255, 255, 0.15);
   transform: scale(1.03);
   opacity: 1;
+}
+.wrap #circle article .inner > div:hover i {
+  color: lightcyan;
+  text-shadow: 0px 0px 10px aqua;
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+.wrap #circle .face1 {
+  display: block;
+}
+.wrap #circle .face1 .inner > div {
+  width: 290px;
+  height: 254px;
+  float: left;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.wrap #circle .face1 .inner > div p i {
+  font-size: 100px;
+  transition: all 0.5s;
+  opacity: 0.7;
+}
+.wrap #circle .face1 .inner > div h2 {
+  margin-top: 20px;
+  letter-spacing: 2px;
+  transition: all 0.5s;
+}
+.wrap #circle .face1 .inner > div:nth-of-type(odd) {
+  margin-right: 20px;
+}
+
+.wrap #circle article .inner > div:hover h2 {
+  color: lightcyan;
+  text-shadow: 0px 0px 10px aqua;
 }
