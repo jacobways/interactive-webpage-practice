@@ -36,6 +36,14 @@ body {
   opacity: 0.5;
   /* position fixed와 100% 대신에, 100vw 100vh 적용해도 됨 */
 }
+@keyframes ani {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
 .wrap #circle {
   width: 600px;
   height: 800px;
@@ -44,7 +52,8 @@ body {
   left: 50%;
   margin-top: -400px;
   margin-left: -300px;
-  border: 1px solid aqua;
+  transform-style: preserve-3d;
+  animation: ani linear 30s infinite;
 }
 .wrap #circle article {
   width: 100%;
@@ -54,6 +63,7 @@ body {
   left: 0px;
   /* background: rgba(255, 255, 255, 0.4); */
   /* display: none; */
+  backface-visibility: hidden; /* 반대쪽인 뒷면 숨김 처리 */
 }
 .wrap #circle article h1 {
   position: absolute;
@@ -91,11 +101,22 @@ body {
   transform: scale(1.03);
   opacity: 1;
 }
+
+.wrap #circle article .inner > div h2 {
+  transition: all 0.5s;
+}
+.wrap #circle article .inner > div i {
+  transition: all 0.5s;
+}
+.wrap #circle article .inner > div:hover h2 {
+  color: lightcyan;
+  text-shadow: 0px 0px 10px aqua;
+}
 .wrap #circle article .inner > div:hover i {
   color: lightcyan;
   text-shadow: 0px 0px 10px aqua;
   transform: scale(1.2);
-  transition: all 0.5s;
+  /* transition: all 0.5s; */
 }
 
 .wrap #circle .face1 .inner > div {
@@ -410,4 +431,29 @@ body {
   position: absolute;
   top: 0px;
   right: 40px;
+}
+
+.face1 {
+  transform: rotateY(0deg) translateZ(-764px);
+}
+.face2 {
+  transform: rotateY(45deg) translateZ(-764px);
+}
+.face3 {
+  transform: rotateY(90deg) translateZ(-764px);
+}
+.face4 {
+  transform: rotateY(135deg) translateZ(-764px);
+}
+.face5 {
+  transform: rotateY(180deg) translateZ(-764px);
+}
+.face6 {
+  transform: rotateY(225deg) translateZ(-764px);
+}
+.face7 {
+  transform: rotateY(270deg) translateZ(-764px);
+}
+.face8 {
+  transform: rotateY(315deg) translateZ(-764px);
 }
