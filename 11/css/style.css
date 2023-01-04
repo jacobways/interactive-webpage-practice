@@ -56,8 +56,17 @@ main nav {
   top: 10vh;
   right: 5vw;
   z-index: 3;
-  border: 10px solid aqua;
+  /* border: 10px solid aqua; */
 }
+main nav ul {
+  display: flex;
+}
+main nav ul li a {
+  font-size: 18px;
+  color: #bbb;
+  margin-right: 30px;
+}
+
 main section {
   position: relative;
   width: 80%;
