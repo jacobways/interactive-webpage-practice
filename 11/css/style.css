@@ -1,0 +1,69 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  outline: 0;
+}
+main {
+  width: 100%;
+  height: 100vh;
+  background: #333;
+  display: flex;
+}
+main header {
+  width: 20%;
+  height: 100%;
+  padding: 10vh 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+  /* border: 10px solid pink; */
+}
+main header h1 {
+  /* 안쪽의 자간과 줄 높이 초기화 (블록 요소 안에 인라인 요소로 콘텐츠 배치하면 인라인 요소에 불필요한 간격 추가됨) */
+  font-size: 0px;
+
+  color: #fff;
+}
+main header h1 i {
+  font-size: 5vw;
+  margin-bottom: 15px;
+}
+main header h1 span {
+  font: normal 0.8vw/1 "arial";
+}
+main header address {
+  font: normal 11px/1.2 "arial";
+  color: #888;
+}
+
+main nav {
+  position: absolute;
+  top: 10vh;
+  right: 5vw;
+  z-index: 3;
+  border: 10px solid aqua;
+}
+main section {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  padding-top: 140px;
+  z-index: 1;
+  border: 10px solid yellow;
+}
