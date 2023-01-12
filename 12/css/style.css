@@ -104,3 +104,33 @@ figure section article.on .inner {
   opacity: 0.9; /*투명도를 높여서 활성화*/
   transform: scale(1.1); /*확대시켜서 활성화*/
 }
+
+figure section article .inner .pic {
+  width: 15vw;
+  height: 15vw;
+  margin: 0px auto;
+  border-radius: 50%;
+  /* JS로 삽입된 이미지를 .pic 프레임 안에서 보이기 않기 위해 아래 두 속성 적용 */
+  background-repeat: no-repeat;
+  background-position: 200%; /* 배경 이미지 위치값 조절하여 .pic 요소의 이미지 숨김 */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+figure section article .inner .pic::before,
+figure section article .inner .pic::after {
+  content: "";
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: inherit; /* 부모 요소 .pic로부터 이미지 상속 */
+  background-position: center;
+  background-repeat: inherit;
+  background-size: cover;
+  transform-origin: center center;
+}
