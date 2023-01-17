@@ -41,14 +41,7 @@ header h1 {
   top: 50%;
   transform: translateY(-150%);
 }
-header h1::after {
-  content: "";
-  display: block;
-  width: 150px;
-  height: 2px;
-  background: #fff;
-  margin-top: 20px;
-}
+
 header h1::before {
   content: "UI/UX DEVELOPMENT"; /* HTML이 아닌 CSS로 콘텐츠 입력 */
   display: block;
@@ -59,4 +52,32 @@ header h1::before {
   left: 0px;
   top: 140px;
   opacity: 0.8;
+}
+header h1::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 2px;
+  background: #fff;
+  margin-top: 20px;
+}
+
+header ul {
+  position: absolute;
+  left: 40px;
+  bottom: 100px;
+}
+header ul li {
+  float: left;
+  margin-right: 10px;
+}
+header ul li a {
+  font-size: 20px;
+  color: #fff;
+}
+header ul li a span {
+  display: inline-block;
+  font-weight: bold;
+  opacity: 0.7;
+  transform: scale(0.7) translateX(-10px); /* 70% 축소하고 왼쪽으로 -10px만큼 이동 */
 }
