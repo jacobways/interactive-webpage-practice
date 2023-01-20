@@ -106,24 +106,24 @@
         loop: true,
         pagination: {
           el: ".swiper-pagination",
-          type: "fraction",
+          type: "fraction", // 페이지 버튼 대신 슬라이더 번호 출력
         },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
         spaceBetween: 0,
-        slidesPerView: "auto",
-        grabCursor: true,
-        centeredSlides: true,
-        speed: 1000,
-        effect: "coverflow",
+        slidesPerView: "auto", // CSS에서 지정한 슬라이더의 크기를 반영
+        grabCursor: true, // 스와이프 시 마우스 포인터 모양 변경
+        centeredSlides: true, // 슬라이더 패널을 항상 가운데로 정렬
+        speed: 1000, // 슬라이더 이동 속도 지정
+        effect: "coverflow", // 이펙트 효과 지정
         coverflowEffect: {
-          rotate: 50,
-          stretch: -100,
-          depth: 400,
-          modifier: 1,
-          slideShadows: false,
+          rotate: 50, // 회전 각도 지정
+          stretch: -100, // 슬라이드 간의 당김 정도 지정
+          depth: 400, // 원근감 지정
+          modifier: 1, // 중첩 정도 지정
+          slideShadows: false, // 슬라이드 그림자 생성
         },
         autoplay: {
           delay: 1000,
