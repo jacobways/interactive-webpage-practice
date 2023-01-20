@@ -25,3 +25,35 @@ a {
   box-sizing: border-box;
   background: linear-gradient(45deg, #ac8bef, #2ddbdc);
 }
+.wrap h1 {
+  font-weight: normal;
+  font-size: 24px;
+  font-family: "orbitron";
+  color: #fff;
+  letter-spacing: 1px;
+  position: absolute;
+  left: 50px;
+  top: 70px;
+}
+.wrap h1 span {
+  opacity: 0.8;
+}
+.wrap .auto {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  z-index: 20;
+}
+.wrap .auto li {
+  float: left;
+  margin-right: 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  opacity: 0.9;
+  transition: all 0.5s;
+}
+.wrap .auto li:hover {
+  opacity: 1;
+  transform: scale(1.4);
+}
